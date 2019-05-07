@@ -3,7 +3,6 @@ import java.util.*;
 public class AndrewOrihillDataStructuresAlgorithmsFinal {
 public static void main(String[] args)
 {
-    
 class Graphs
 {
     private Map<Integer, List<Integer>> adjacencyList;
@@ -102,7 +101,6 @@ void BFS(int s)
 
             Object[] adj = null;
 			Iterator<Integer> i = extracted1(s, adj).listIterator();
-
             while (i.hasNext())
             {
                 int n = i.next();
@@ -120,27 +118,11 @@ private List<Integer> extracted1(int s, Object[] adj) {
 private List<Integer> extracted11(int s, Object[] adj) {
 	return extracted11(s, adj);
 }
-
 private List<Integer> extracted2(int s, Object[] adj) {
 	return extracted2(s, adj);
 }
-
 private List<Integer> extracted3(int s, Object[] adj) {
 	return extracted3(s, adj);
-}
-
-void GraphDFSUtil(int v, boolean visited[])
-{
-    visited[v] = true;
-    Object count = v ;
-
-    List<Integer>.iterator<Integer> i;
-
-    for (i = adj[v]; i != adj[v]; ++i)
-
-        if (!visited[i])
-
-            DFSUtil(i, visited);
 }
 void Graph(int v)
 
@@ -148,7 +130,6 @@ void Graph(int v)
     boolean[] visited1 = new boolean[v];
     for (int i = 0; i < v; i++)
         visited1[i] = false;
-    GraphDFSUtil(v, visited1);
 
 }
 //DIJIKSTRAS ALGORITM
@@ -211,7 +192,6 @@ dist[u] != Integer.MAX_VALUE &&
 dist[u]+graph[u][v] < dist[v])
 dist[v] = dist[u] + graph[u][v];
 }
-
 printSolution(dist, V);
 }
 }

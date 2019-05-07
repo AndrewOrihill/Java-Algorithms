@@ -3,7 +3,6 @@ import java.util.*;
 public class AndrewOrihillDataStructuresAlgorithmsFinal {
 public static void main(String[] args)
 {
-    System.out.println("Look here for 2 seconds");
     
 class Graphs
 {
@@ -88,13 +87,10 @@ class Graphs
 void BFS(int s)
 
     {
-        // Mark all the vertices' as not visited(By default set as false)
         int V = 0;
 		boolean visited[] = new boolean[V];
-        // Create a queue for BFS
         LinkedList<Integer> queue = new LinkedList<Integer>();
 
-        // Mark the current node as visited and enqueue it
         visited[s]=true;
 
         queue.add(s);
@@ -138,7 +134,6 @@ void GraphDFSUtil(int v, boolean visited[])
     visited[v] = true;
     Object count = v ;
 
-    //----------------List<Integer>::iterator i;--------
     List<Integer>.iterator<Integer> i;
 
     for (i = adj[v]; i != adj[v]; ++i)
@@ -150,11 +145,9 @@ void GraphDFSUtil(int v, boolean visited[])
 void Graph(int v)
 
 {
-    // Mark all the vertices's as not visited
     boolean[] visited1 = new boolean[v];
     for (int i = 0; i < v; i++)
         visited1[i] = false;
-    // Call the recursive helper function
     GraphDFSUtil(v, visited1);
 
 }
@@ -188,12 +181,10 @@ for (int i = 0; i < V; i++)
 
 System.out.println(i+" tt "+dist[i]);
 }
-// Function that implements Dijkstra's single source shortest path algorithm 
 
 void dijkstra(int graph[][], int src)
 {
 int dist[] = new int[V]; 
-// The output array dist[i] will hold src to i's shortest distance 
 
 Boolean sptSet[] = new Boolean[V];
 
@@ -220,7 +211,7 @@ dist[u] != Integer.MAX_VALUE &&
 dist[u]+graph[u][v] < dist[v])
 dist[v] = dist[u] + graph[u][v];
 }
-// print the constructed distance array
+
 printSolution(dist, V);
 }
 }
